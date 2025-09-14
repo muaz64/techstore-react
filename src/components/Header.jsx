@@ -53,7 +53,10 @@ const Header = ({ onCartClick, onLoginClick }) => {
         <nav className="flex flex-col space-y-4 text-lg">
           <a href="#home" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:bg-gray-100 p-2 rounded-lg transition-colors">Home</a>
           <a href="#products" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:bg-gray-100 p-2 rounded-lg transition-colors">Products</a>
-          {/* ... Add other links here ... */}
+          <a href="#trending" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:bg-gray-100 p-2 rounded-lg transition-colors">Trending</a>
+          <a href="#dashboard" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:bg-gray-100 p-2 rounded-lg transition-colors">Dashboard</a>
+          <a href="#faq" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:bg-gray-100 p-2 rounded-lg transition-colors">FAQ</a>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-gray-800 hover:bg-gray-100 p-2 rounded-lg transition-colors">Contact</a>
         </nav>
       </aside>
     </>
