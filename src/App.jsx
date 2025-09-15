@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Products from "./components/Products";
 import Trending from "./components/Trending";
 import Features from "./components/Features";
+import Dashboard from "./components/Dashboard";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Trending />
           <Features />
           <Products />
+          <Dashboard />
          </main>
       
     </div>
