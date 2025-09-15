@@ -1,4 +1,5 @@
 import "./App.css"
+import { useState } from 'react';
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Products from "./components/Products";
@@ -24,7 +25,7 @@ function App() {
           <Dashboard />
           <FAQ />
          </main>
-      
+
     </div>
   );
 }
