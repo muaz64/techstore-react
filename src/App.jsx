@@ -5,6 +5,7 @@ import Products from "./components/Products";
 import Trending from "./components/Trending";
 import Features from "./components/Features";
 import Dashboard from "./components/Dashboard";
+import FAQ from "./components/FAQ";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Features />
           <Products />
           <Dashboard />
+          <FAQ />
          </main>
       
     </div>
