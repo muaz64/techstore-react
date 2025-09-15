@@ -1,6 +1,7 @@
 import "./App.css"
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Products from "./components/Products";
 function App() {
 
 
@@ -12,6 +13,7 @@ function App() {
          />
          <main className="space-y-16 py-12">
           <Hero />
+          <Products />
          </main>
       
     </div>
