@@ -1,8 +1,7 @@
 import  { useState } from 'react';
 
-const Header = ({ onCartClick, onLoginClick }) => {
+const Header = ({ onCartClick, onLoginClick, cartCount }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const cartCount = 0; // This would typically come from state management
 
   return (
     <>
