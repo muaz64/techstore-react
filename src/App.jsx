@@ -7,6 +7,7 @@ import Trending from "./components/Trending";
 import Features from "./components/Features";
 import Dashboard from "./components/Dashboard";
 import FAQ from "./components/FAQ";
+import Contact from "./components/Contact";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Products />
           <Dashboard />
           <FAQ />
+          <Contact />
          </main>
 
     </div>
