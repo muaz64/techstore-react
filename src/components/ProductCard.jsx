@@ -1,4 +1,4 @@
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, addToCart }) => {
   const { name, price, image, rating, reviews } = product;
 
   return (
@@ -12,7 +12,10 @@ const ProductCard = ({ product }) => {
         <span className="text-xs text-gray-500 ml-2">({reviews})</span>
       </div>
       <span className="text-xl font-bold text-blue-600 mb-4">${price}</span>
-      <button className="add-to-cart-btn w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-full transition-colors hover:bg-blue-600">
+      <button
+        className="add-to-cart-btn w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-full transition-colors hover:bg-blue-600"
+        onClick={() => addToCart(product)}
+      >
         Add to Cart
       </button>
     </div>
