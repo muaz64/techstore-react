@@ -12,14 +12,13 @@ const allProducts = [
     { id: 8, name: "Surface Laptop", price: 1199, category: "laptops", image: "https://placehold.co/150x150/e0e7ff/4338ca?text=💻", rating: 4, reviews: 76 }
 ];
 
-const Products = () => {
-  
+const Products = ({ addToCart }) => {
   const [currentFilter, setCurrentFilter] = useState('all');
 
-  
-  const filteredProducts = currentFilter === 'all' 
-    ? allProducts 
-    : allProducts.filter(p => p.category === currentFilter);
+  const filteredProducts =
+    currentFilter === 'all'
+      ? allProducts
+      : allProducts.filter(p => p.category === currentFilter);
 
   const filterButtons = ['all', 'phones', 'laptops', 'accessories'];
 
@@ -43,10 +42,10 @@ const Products = () => {
           ))}
         </div>
       </div>
-      
+
       <div id="productGrid" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {filteredProducts.map(product => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} addToCart={addToCart} />
         ))}
       </div>
     </section>

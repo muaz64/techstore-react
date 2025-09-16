@@ -28,6 +28,22 @@ function App() {
     { id: 8, name: "Surface Laptop", price: 1199, category: "laptops", image: "https://placehold.co/150x150/e0e7ff/4338ca?text=💻", rating: 4, reviews: 76 }
   ]);
 
+
+  const addToCart = (product) => {
+  setCartItems(prevItems => {
+    const existingItem = prevItems.find(item => item.id === product.id);
+    if (existingItem) {
+      return prevItems.map(item =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+    } else {
+      return [...prevItems, { ...product, quantity: 1 }];
+    }
+  });
+};
+
   return (
     <div className="text-gray-800">
       <Header
@@ -40,7 +56,7 @@ function App() {
           <Hero />
           <Trending />
           <Features />
-          <Products />
+          <Products addToCart={addToCart} />
           <Dashboard />
           <FAQ />
           <Contact />
