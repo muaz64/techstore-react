@@ -8,8 +8,10 @@ import Features from "./components/Features";
 import Dashboard from "./components/Dashboard";
 import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
+  
 
 
   return (
@@ -27,6 +29,7 @@ function App() {
           <FAQ />
           <Contact />
          </main>
+         <Footer />
 
     </div>
   );
