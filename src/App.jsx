@@ -1,5 +1,8 @@
 import "./App.css"
 import { useState } from 'react';
+import toast from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
+//components
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Products from "./components/Products";
@@ -20,6 +23,7 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (product) => {
+     toast.success(`${product.name} added to cart`);
   setCartItems(prevItems => {
     const existingItem = prevItems.find(item => item.id === product.id);
     if (existingItem) {
@@ -41,6 +45,7 @@ const removeFromCart = (productId) => {
 
   return (
     <div className="text-gray-800">
+      <Toaster/>
       <Header
         onCartClick={() => setIsCartOpen(true)} 
         onLoginClick={() => setIsLoginOpen(true)}
